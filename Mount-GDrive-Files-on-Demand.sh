@@ -10,7 +10,7 @@ rclone config
 
 mkdir -p "/home/jessica/Google Drive"
 
-nano ~/.config/systemd/user/rclone-gdrive.service
+sudo nano /etc/systemd/system/rclone-google-drive.service
 # Paste the contents of Mount-GDrive-Files-on-Demand-rclone-gdrive.service.txt
 
 systemctl --user daemon-reload
