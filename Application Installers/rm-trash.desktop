@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Link to nateshmbhat/rm-trash: A "rm-trash" is meant to be used in place of rm system command in linux . This script will safely delete your files and put them in the trash for later retrieval.
+Type=Link
+URL=https://github.com/nateshmbhat/rm-trash
+Icon=text-html
+Name[en_US]=rm-trash

@@ -1,16 +1,62 @@
-# Place the following lines in /home/jessica/.inputrc
+# Place the following lines in /home/jessica/.inputrc for the local user or in
+# /etc/inputrc for systemwide changes.
+nano /home/jessica/.inputrc
+nano /etc/inputrc
+
+$include /etc/inputrc
+set completion-ignore-case On
+set bell-style none
 
 # Reverse search history:
-"\C-f": reverse-search-history
 "\C-r": ""
+"\C-f": reverse-search-history
 
 # Cycle reverse search history with PageUp and PageDown:
+"\e[5~": ""
+"\e[6~": ""
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+# Cycle reverse search history with Up and Down:
+"^[[A": ""
+"^[[B": ""
+"^[[A": history-search-backward
+"^[[B": history-search-forward
+
+# "^[[A" - up
+# "^[[B" - down
+Save it, then run:
+bind -f ~/.inputrc
+
+
+
+# OLD CONFIG
+GNU nano 7.2             /home/jessica/.inputrc
+# Reverse search history:
+"\C-r": ""
+"\C-f": reverse-search-history
+
+
+# Cycle reverse search history with PageUp and PageDown:
+"\e[5~": ""
+"\e[6~": ""
 "\e[5~": history-search-forward
 "\e[6~": history-search-backward
 
 # Cycle reverse search history with Up and Down:
+"\e[A": ""
+"\e[B": ""
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
-Save it, then run:
-bind -f ~/.inputrc
+### EXAMPLES
+
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+jessica@Jessica-SuperPC:~$ bind -f ~/.inputrc
+jessica@Jessica-SuperPC:~$ bind -f ~/.inputrc
+jessica@Jessica-SuperPC:~$ bind -h
+bash: bind: -h: invalid option
+bind: usage: bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r keyseq] [-x keyseq:shell-command] [keyseq:readline-function or readline-command]
+jessica@Jessica-SuperPC:~$
