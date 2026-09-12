@@ -1,0 +1,16 @@
+# Place the following lines in /home/jessica/.inputrc
+
+# Reverse search history:
+"\C-f": reverse-search-history
+"\C-r": ""
+
+# Cycle reverse search history with PageUp and PageDown:
+"\e[5~": history-search-forward
+"\e[6~": history-search-backward
+
+# Cycle reverse search history with Up and Down:
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+Save it, then run:
+bind -f ~/.inputrc
